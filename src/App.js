@@ -1,10 +1,11 @@
-import React from "react";
+import React from 'react';
+import Head from './view/Head';
 
 
 function App() {
   return (
     <React.Fragment>
-      <h1>App</h1>
+      <Head />
     </React.Fragment>
   );
 }
