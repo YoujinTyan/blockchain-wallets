@@ -19,7 +19,7 @@ function MainPage() {
     .catch((error) => console.log(error));
   };
 
-  function SearchInput() {
+  function SearchField() {
     return (
       <React.Fragment>
         <h4>Поиск по постам</h4>
@@ -53,7 +53,7 @@ function MainPage() {
   return (
     <React.Fragment>
       <h1>Небольшой блог</h1>
-      <SearchInput />
+      <SearchField />
       <PostList />
     </React.Fragment>
   );
