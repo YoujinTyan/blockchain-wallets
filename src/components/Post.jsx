@@ -10,8 +10,8 @@ function Post(props) {
   return (
     <div className="post">
       <h3>{titlePost}</h3>
+      <hr />
       <div className="post-body">
-        <p><hr /></p>
         <p>{bodyPost}</p>
       </div>
     </div>
