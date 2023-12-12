@@ -1,0 +1,12 @@
+.post {
+  box-shadow: 0 4px 8px 0 rgba(3, 161, 148, .2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px 0 rgba(3, 161, 148, .2);
+}
+
+.container {
+  padding: 2px 16px;
+}
