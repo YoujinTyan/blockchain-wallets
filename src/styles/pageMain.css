@@ -1,0 +1,49 @@
+h4 {
+  margin: 10px auto;
+}
+
+hr {
+  margin: 0 auto;
+}
+
+.post-list {
+  display: block;
+  justify-content: center;
+  text-align: center;
+}
+
+.posts {
+  text-align: left;
+}
+
+.search-field {
+  margin: 0 auto;
+  display: block;
+  text-align: left;
+  width: 100%;
+  max-width: 485px;
+  margin-top: 75px;
+}
+
+input {
+  width: 72%;
+  height: 0.9em;
+  padding: 0.71em 0.8em;
+}
+
+button {
+  width: 20%;
+  margin-left: 1%;
+  padding: 0.5em 1.5em; /* Поля по вертикали и горизонтали */
+  background-color: transparent; /* Прозрачный цвет фона */
+  font-size: 0.9em; /* Размер текста */
+  text-transform: uppercase; /* Все буквы заглавные */
+  color: #E384FF; /* Серый цвет текста */
+  border: 2px solid #FFA3FD; /* Параметры рамки */
+  cursor: pointer;
+}
+
+button:active {
+  background-color: #FFA3FD;
+  color: #191825;
+}

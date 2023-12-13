@@ -1,5 +1,6 @@
 import React from 'react';
 import Post from '../components/Post';
+import '../styles/pageMain.css';
 import { useState, useEffect } from 'react';
 
 
@@ -21,7 +22,7 @@ function MainPage() {
 
   function SearchField() {
     return (
-      <React.Fragment>
+      <div className='search-field'>
         <h4>Поиск по постам</h4>
         <input
           onChange={console.log('input is changing')}
@@ -31,13 +32,13 @@ function MainPage() {
         <button
           onClick={console.log('кнопка поиска нажата')}
         >Найти</button>
-      </React.Fragment>
+      </div>
     );
   };
 
   function PostList() {
     return(
-      <React.Fragment>
+      <div className="posts">
         {posts.map((post) => (
           <Post
             key={post.id}
@@ -46,16 +47,16 @@ function MainPage() {
             bodyPost={post.body}
           />
         ))};
-      </React.Fragment>
+      </div>
     )
   };
 
   return (
-    <React.Fragment>
+    <div className="post-list">
       <h1>Небольшой блог</h1>
-      <SearchField />
+      <SearchField/>
       <PostList />
-    </React.Fragment>
+    </div>
   );
 }
 
