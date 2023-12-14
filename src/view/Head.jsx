@@ -1,7 +1,8 @@
-import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import '../styles/head.css';
+import '../styles/adaptive.css';
 
 
 function Head() {

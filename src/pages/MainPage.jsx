@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Post from '../components/Post';
 import '../styles/pageMain.css';
-import { useState, useEffect } from 'react';
+import '../styles/adaptive.css';
+import '../styles/loader.css';
 
 
 function MainPage() {
-  const [posts, setPosts] = useState([]);
+  const [ posts, setPosts ] = useState([]);
+  const [ isPostsDownloaded, setisPostsDownloaded ] = useState(false);
 
   useEffect(() => {
     fetchData();
@@ -16,13 +18,14 @@ function MainPage() {
     .then((response) => response.json())
     .then((data) => {
       setPosts(data);
+      setisPostsDownloaded(true);
     })
     .catch((error) => console.log(error));
   };
 
   function SearchField() {
     return (
-      <div className='search-field'>
+      <div className={isPostsDownloaded ? 'search-field' : 'search-field'}>
         <h4>Поиск по постам</h4>
         <input
           onChange={console.log('input is changing')}
@@ -30,6 +33,7 @@ function MainPage() {
           placeholder='Введите часть загловка или поста'
         />
         <button
+          className='search-btn'
           onClick={console.log('кнопка поиска нажата')}
         >Найти</button>
       </div>
@@ -38,15 +42,23 @@ function MainPage() {
 
   function PostList() {
     return(
-      <div className="posts">
-        {posts.map((post) => (
+
+      <div className='posts'>
+        { isPostsDownloaded ?
+          posts.map((post) => (
           <Post
             key={post.id}
             id={post.id}
             titlePost={post.title}
             bodyPost={post.body}
           />
-        ))};
+        ))
+        :
+        (<div class="loader">
+          <div class="inner one"></div>
+          <div class="inner two"></div>
+          <div class="inner three"></div>
+        </div>)};
       </div>
     )
   };

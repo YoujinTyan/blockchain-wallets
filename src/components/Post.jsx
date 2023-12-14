@@ -1,5 +1,6 @@
 import React from 'react';
-import '../styles/post.css';
+import '../styles/pageMain.css';
+import '../styles/adaptive.css';
 
 
 function Post(props) {

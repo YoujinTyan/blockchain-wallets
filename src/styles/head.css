@@ -80,6 +80,7 @@
 }
 
 @media screen and (max-width: 1279px) {
+  /* HEADER */
   .hamburger {
     display: block;
   }

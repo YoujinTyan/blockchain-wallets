@@ -1,10 +1,10 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Head from './view/Head';
+import Page404 from './pages/Page404';
 import MainPage from './pages/MainPage';
 import SettingsPage from './pages/SettingsPage';
 import WalletsPage from './pages/WalletsPage';
-import Head from './view/Head';
-import { Route, Routes } from 'react-router-dom';
-import Page404 from './pages/Page404';
 
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       <Routes> 
         <Route
           path='/'
-          element={<MainPage/>}
+          element={<MainPage />}
         />
         <Route
           path='/wallets'

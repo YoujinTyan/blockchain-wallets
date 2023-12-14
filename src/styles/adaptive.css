@@ -1,0 +1,80 @@
+@media screen and (max-width: 1279px) {
+  /* HEADER */
+  .hamburger {
+    display: block;
+  }
+
+  .navigation-menu ul {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    background-color: #2B2A4C;
+    border-top: 1px solid #2B2A4C;
+    display: none;
+  }
+
+  .navigation-menu li {
+    text-align: center;
+    margin: 0;
+  }
+
+  .navigation-menu li .link {
+    width: 100%;
+    padding: 1.5rem 0;
+  }
+
+  .btn-off {
+    color: black;
+  }
+
+  .navigation-menu li:hover {
+    background-color: #35335c;
+    color: black;
+  }
+
+  .navigation-menu.expanded ul {
+    display: block;
+  }
+  .current-page {
+    width: 10px;
+  }
+  
+  /* MAIN PAGE */
+  h4 {
+    margin: 10px 5px;
+  }
+
+  input {
+    width: 92%;
+    height: 0.9em;
+    padding: 0.71em 0.8em;
+    margin-left: 5px;
+  }
+
+  .search-btn {
+    width: 20%;
+    margin: 3% 0 0 42%;
+    padding: 1.5% 1.5%;
+    font-size: 90%;
+  }
+
+  .search-field {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 485px;
+    margin-top: 75px;
+  }
+
+  .post {
+    width: 80%;
+    max-width: 420px;
+    margin-top: 50px;
+  }
+
+  /* WALLETS PAGE */
+
+  /* SETTINGS PAGE */
+}
