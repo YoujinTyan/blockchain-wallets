@@ -1,10 +1,9 @@
 import React from 'react';
-import '../styles/pageMain.css';
-import '../styles/adaptive.css';
 
 
 function Post(props) {
   let { titlePost, bodyPost} = props;
+  
   titlePost = titlePost[0].toUpperCase() + titlePost.slice(1);
   bodyPost = bodyPost[0].toUpperCase() + bodyPost.slice(1);
 

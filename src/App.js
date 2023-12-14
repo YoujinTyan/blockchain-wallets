@@ -19,15 +19,15 @@ function App() {
         />
         <Route
           path='/wallets'
-          element={<WalletsPage/>}
+          element={<WalletsPage />}
         />
         <Route
           path='/settings'
-          element={<SettingsPage/>}
+          element={<SettingsPage />}
         />
         <Route
           path='*'
-          element={<Page404/>}
+          element={<Page404 />}
         />
       </Routes>
     </React.Fragment>

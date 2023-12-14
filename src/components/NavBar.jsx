@@ -1,7 +1,7 @@
 import React from 'react';
+
 import NavLink from './NavLink';
 import Gamburger from './Gamburger';
-import '../styles/head.css';
 
 
 function NavBar(props) {

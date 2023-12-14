@@ -75,8 +75,11 @@ input {
   color: #191825;
 }
 
+.disabled {
+  pointer-events: none;
+}
+
 @media screen and (max-width: 1279px) {
-  /* MAIN PAGE */
   h4 {
     margin: 10px 5px;
   }

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import '../styles/head.css';
-import '../styles/adaptive.css';
 
 
 function Head() {
@@ -10,7 +9,7 @@ function Head() {
   const [ activePage, setActivePage ] = useState('link btn-off');
 
   return (
-    <nav className="navigation">
+    <nav className='navigation'>
       <Link to="/" className="logo">
         MBWallets
       </Link>

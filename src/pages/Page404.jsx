@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import "../styles/page404.css";
 
 
 function Page404() {
+
   return (
     <div className="main-container">
       <div className="container">
