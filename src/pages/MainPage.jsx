@@ -19,7 +19,7 @@ function MainPage() {
   return (
     <div className="post-list">
       <h1>Небольшой блог</h1>
-      <SearchField posts={posts} />
+      <SearchField posts={posts} setPosts={setPosts} />
       <PostList posts={posts} />
     </div>
   );
