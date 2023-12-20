@@ -5,7 +5,6 @@ import "../styles/page404.css";
 
 
 function Page404() {
-
   return (
     <div className="main-container">
       <div className="container">
@@ -18,6 +17,6 @@ function Page404() {
       </div>
     </div>
   );
-}
+};
 
 export default Page404;

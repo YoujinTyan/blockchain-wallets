@@ -7,7 +7,7 @@ function Gamburger(props) {
   return (
     <button
       className="hamburger"
-      onClick={() => { setIsNavExpanded(!isNavExpanded); }}
+      onClick={() => {setIsNavExpanded(!isNavExpanded)}}
     >
       <svg 
         xmlns="http://www.w3.org/2000/svg" 
@@ -24,6 +24,6 @@ function Gamburger(props) {
 
     </button>
   );
-}
+};
 
 export default Gamburger;

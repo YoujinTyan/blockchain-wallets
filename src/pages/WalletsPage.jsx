@@ -8,6 +8,6 @@ function WalletsPage() {
       <h1>WalletsPage</h1>
     </React.Fragment>
   );
-}
+};
 
 export default WalletsPage;

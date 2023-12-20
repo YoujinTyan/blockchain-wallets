@@ -2,7 +2,7 @@ import React from 'react';
 
 
 function Post(props) {
-  let { titlePost, bodyPost} = props;
+  let { titlePost, bodyPost } = props;
   
   titlePost = titlePost[0].toUpperCase() + titlePost.slice(1);
   bodyPost = bodyPost[0].toUpperCase() + bodyPost.slice(1);
@@ -16,6 +16,6 @@ function Post(props) {
       </div>
     </div>
   );
-}
+};
 
 export default Post;

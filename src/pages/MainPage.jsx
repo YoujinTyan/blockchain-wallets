@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useEffect} from 'react';
 
 import { fetchData } from '../services/api';
 
@@ -9,20 +9,22 @@ import '../styles/pageMain.css';
 import '../styles/loader.css';
 
 
-function MainPage() {
-  const [ posts, setPosts ] = useState([]);
+function MainPage(props) {
+  const { store } = props;
 
   useEffect(() => {
-    fetchData(setPosts);
-  }, []);
+    fetchData(store).then(() => {
+      console.log('loaded');
+    });
+  });
 
   return (
     <div className="post-list">
       <h1>Небольшой блог</h1>
-      <SearchField posts={posts} setPosts={setPosts} />
-      <PostList posts={posts} />
+      <SearchField />
+      <PostList store={ store } />
     </div>
   );
-}
+};
 
 export default MainPage;

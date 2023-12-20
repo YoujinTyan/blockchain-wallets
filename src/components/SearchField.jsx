@@ -1,37 +1,52 @@
+import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 
+import { setPosts } from "../store/reducers/post_reducer";
+import { fetchData } from "../services/api";
 
-function SearchField(props) {
-  const { posts, setPosts } = props;
-  const [ inputValue, setInputValue ] = useState([]);
+import { store } from "../store/store";
+
+
+function SearchField() {
+  const [ inputValue, setInputValue ] = useState('');
+  const dispatch = useDispatch();
+  const posts = useSelector(state => state.postList.posts);
 
   function handleOnClick() {
-    // Временная логика
-    console.log('кнопка поиска нажата');
-    console.log('inputValue.length', inputValue.length);
-    console.log('POSTS', posts);
     if (inputValue.length > 0) {
-      const tmp = posts.filter((post) => {
-        return post.title.toLowerCase().includes(inputValue.toLowerCase()) || post.body.toLowerCase().includes(inputValue);
-      });
-      setPosts(tmp);
-      setInputValue([]);
-      console.log('tmp', tmp);
-      console.log('posts', posts);
-    } else {
-      setPosts(posts);
+      try {
+        const filteredPosts = posts.filter((post) => {
+            return post.title.toLowerCase().includes(inputValue.toLowerCase()) || post.body.toLowerCase().includes(inputValue);
+        });
+        dispatch(setPosts(filteredPosts))
+        setInputValue('');
+        console.log('searched', filteredPosts.length)
+
+        if (filteredPosts.length === 0) {
+          fetchData(store).then(() => {
+            console.log('not searched')
+          });
+        }
+      } catch (exception) {
+          console.log(exception)
+        };
     }
   };
 
+  function resetPosts() {
+    fetchData(store).then(() => {
+      console.log('not searched')
+    });
+  }
+
   function handleOnChange(event) {
     event.preventDefault();
-    setInputValue(event.target.value);
-  };
-
+      setInputValue(event.target.value);
+    };
 
   return (
     <div className={posts.length > 0 ? 'search-field' : 'search-field disabled'}>
-      <h4>Поиск по постам</h4>
+      <h4>Поиск по постам <span id={"mini-button"} onClick={resetPosts}>Обновить</span></h4>
       <input
         onChange={handleOnChange}
         type='text'

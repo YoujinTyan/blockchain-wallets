@@ -8,6 +8,6 @@ function SettingsPage() {
       <h1>SettingsPage</h1>
     </React.Fragment>
   );
-}
+};
 
 export default SettingsPage;

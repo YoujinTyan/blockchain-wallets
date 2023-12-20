@@ -1,18 +1,19 @@
 import Post from '../components/Post';
+import { useSelector } from "react-redux";
 
 
-function PostList(props) {
-  const { posts } = props;
+function PostList() {
+  const posts = useSelector(state => state.postList.posts) || [];
 
   return(
     <div className='posts'>
       { posts.length > 0 ?
           posts.map((post) => (
             <Post
-              key={post.id}
-              id={post.id}
-              titlePost={post.title}
-              bodyPost={post.body}
+              key={ post.id }
+              id={ post.id }
+              titlePost={ post.title }
+              bodyPost={ post.body }
             />)
           )
         :
