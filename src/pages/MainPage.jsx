@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react';
 
 import { fetchData } from '../services/api';
-
 import SearchField from '../components/SearchField';
+
 import PostList from '../components/PostList';
 
 import '../styles/pageMain.css';

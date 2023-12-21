@@ -5,6 +5,7 @@ export const postReducer = createSlice({
     name: 'postList',
     initialState: {
         posts: [],
+        searching: { turnOn: false, notFound: false }, // turnOn - использовали ли поиск, foundData - нашли ли посты
     },
     reducers: {
         setPosts: (state, action) => {
@@ -12,8 +13,12 @@ export const postReducer = createSlice({
             // привести к нижнему регистру
             state.posts = action.payload;
         },
+
+        changeSearchingState: (state, action) => {
+            state.searching = action.payload;
+        },
     },
 });
 
-export const { setPosts } = postReducer.actions;
+export const { setPosts, changeSearchingState } = postReducer.actions;
 export default postReducer.reducer;
