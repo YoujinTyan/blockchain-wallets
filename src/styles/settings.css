@@ -1,0 +1,35 @@
+[data-theme='light'] {
+    /* шрифты и фоны */
+    --body-color: #191825;
+    --bg-wrap-color: #35335c;
+    --font-color: #fff;
+    --dark-color: #2B2A4C;
+
+    /* в основном цвет кнопок */
+    --secondary-color: #FFA3FD;
+    /* одна полоса of loader и тумблеры*/
+    --third-color: #03c457;
+    /* лого, гамбургер, акценты */
+    --accent-color: #865DFF;
+    --accent-light-color: #7752FE;
+    /* надписи страницы 404 */
+    --disabled-color: #A6979C;
+}
+
+[data-theme='dark'] {
+    /* шрифты и фоны */
+    --body-color: #191825;
+    --bg-wrap-color: #35335c;
+    --font-color: #fff;
+    --dark-color: #2B2A4C;
+
+    /* в основном цвет кнопок */
+    --secondary-color: #FFA3FD;
+    /* одна полоса of loader и тумблеры*/
+    --third-color: #03c457;
+    /* лого, гамбургер, акценты */
+    --accent-color: #865DFF;
+    --accent-light-color: #7752FE;
+    /* надписи страницы 404 */
+    --disabled-color: #A6979C;
+}

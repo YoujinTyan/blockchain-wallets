@@ -1,16 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../styles/pageSettings.css'
+import { useSelector } from "react-redux";
 
 
 function SettingsPage() {
+  const [ themeState, setThemeState ] = useState('light')
+
+  const currentTheme = useSelector(state => state.settings.theme);
 
   function changeTheme() {
+    themeState === 'dark' ? setThemeState('light') : setThemeState('dark');
+    // ставим currentTheme --> dark | light
     console.log('theme changed');
   };
 
   function turnOffOnCardano() {
     console.log('turnOffOnCardano');
   };
+
 
   return (
     <div className={'container'}>
@@ -40,6 +47,7 @@ function SettingsPage() {
                   id="slider"
                   type="checkbox"
                   onChange={changeTheme}
+                  defaultChecked={themeState === 'dark'}
                 />
                 <span className="slider round"></span>
               </label>
@@ -83,6 +91,13 @@ function SettingsPage() {
                   <option value="пятнадцать">15</option>
                 </select>
               </label>
+            </td>
+          </tr>
+
+          <tr className="thead">
+            <td className="title-td">
+              {/*TODO: стилизовать кнопку и добавить обработку reset*/}
+              <button>Сбросить настройки</button>
             </td>
           </tr>
         </tbody>

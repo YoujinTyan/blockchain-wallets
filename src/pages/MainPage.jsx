@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 
 import { fetchData } from '../services/api';
@@ -6,17 +6,16 @@ import SearchField from '../components/SearchField';
 
 import PostList from '../components/PostList';
 
-import {
-  Pagination,
-  PaginationItem,
-  TextField,
-  Stack,
-  Link
-} from '@mui/material';
+// import {
+//   Pagination,
+//   PaginationItem,
+//   TextField,
+//   Stack,
+//   Link
+// } from '@mui/material';
 
 import '../styles/pageMain.css';
 import '../styles/loader.css';
-import {changeSearchingState, setLoading} from "../store/reducers/post_reducer";
 
 
 function MainPage() {
