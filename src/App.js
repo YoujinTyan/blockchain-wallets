@@ -16,11 +16,11 @@ function App(props) {
     return (
         <React.Fragment>
           <Head />
-          <Container className="app" maxWidth="md" sx={{ pt: '3rem' }}>
+          <Container className="app">
             <Routes>
               <Route
                   path='/'
-                  element={<MainPage store={store} />}
+                  element={<MainPage />}
               />
               <Route
                   path='/wallets'
@@ -28,7 +28,7 @@ function App(props) {
               />
               <Route
                   path='/settings'
-                  element={<SettingsPage store={store} />}
+                  element={<SettingsPage />}
               />
               <Route
                   path='*'
