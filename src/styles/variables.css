@@ -1,0 +1,51 @@
+:root {
+    /* шрифты и фоны */
+    --body-color: #191825;
+    --bg-wrap-color: #35335c;
+    --font-color: #fff;
+    --dark-color: #2B2A4C;
+
+    /* в основном цвет кнопок */
+    --secondary-color: #FFA3FD;
+    /* одна полоса of loader и тумблеры*/
+    --third-color: #03c457;
+    /* лого, гамбургер, акценты */
+    --accent-color: #865DFF;
+    --accent-light-color: #7752FE;
+    /* надписи страницы 404 */
+    --disabled-color: #A6979C;
+
+
+    /* шрифты */
+    --font-family-name: Roboto;
+    --font-family-name-logo: Impact;
+    /*
+        Tahoma,
+        Calibri,
+        Segoe UI,
+        Roboto,
+    */
+
+
+    /* ПРАВИТЬ */
+    --logo-font-size: 2rem;
+    --p-font-size: 1.5em;
+    --select-font-size: .75em;
+    --h1-size: 3.5em;
+    --h2-size: 2.5em;
+    --underheader-size: 1em;
+    --small-text-size: 11px;
+    --nav-size: 1.2rem;
+    --btn-font-size: 90%;
+
+
+    /* мобильные размеры */
+    --p-font-size-mobile: 1.1em;
+    --select-font-size-mobile: 0.6em;
+    --h1-size-mobile: 30px;
+    --h2-size-mobile: 1.8em;
+}
+
+.light {
+
+}

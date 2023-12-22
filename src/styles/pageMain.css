@@ -1,6 +1,6 @@
-/*TODO: править свойства - без повторений*/
 h4 {
   margin: 10px auto;
+  font-size: var(--underheader-size);
 }
 
 h3 {
@@ -10,7 +10,7 @@ h3 {
 hr {
   margin: 0 auto;
   max-width: 150px;
-  border: 1px solid #FFA3FD;
+  border: 1px solid var(--secondary-color);
 }
 
 .post-list {
@@ -24,20 +24,19 @@ hr {
 }
 
 .post {
-  margin: 0 auto;
+  margin: 50px auto 0;
   display: block;
   justify-content: center;
   width: 100%;
   max-width: 440px;
-  margin-top: 50px;
-  background-color: #35335c;
-  box-shadow: 0px 1px 7px 1px #FFA3FD;
+  background-color: var(--bg-wrap-color);
+  box-shadow: 0px 1px 7px 1px var(--secondary-color);
   transition: 0.2s;
   border-radius: 10px;
 }
 
 .post:hover {
-  box-shadow: 0px 3px 7px 3px #FFA3FD;
+  box-shadow: 0px 3px 7px 3px var(--secondary-color);
 }
 
 .post, .post-body {
@@ -45,12 +44,11 @@ hr {
 }
 
 .search-field {
-  margin: 0 auto;
+  margin: 75px auto 0;
   display: block;
   text-align: left;
   width: 100%;
   max-width: 485px;
-  margin-top: 75px;
 }
 
 input {
@@ -64,16 +62,16 @@ input {
   margin-left: 1%;
   padding: 0.5em 1.5em;
   background-color: transparent; 
-  font-size: 0.9em;
+  font-size: var(--btn-font-size);
   text-transform: uppercase;
-  color: #E384FF; 
-  border: 2px solid #FFA3FD; 
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
   cursor: pointer;
 }
 
 .search-btn:active {
-  background-color: #FFA3FD;
-  color: #191825;
+  background-color: var(--secondary-color);
+  color: var(--font-color);
 }
 
 .disabled {
@@ -81,13 +79,13 @@ input {
 }
 
 #mini-button {
-  font-size: 10px;
+  font-size: var(--small-text-size);
   margin-left: 185px;
-  color: #FFA3FD;
+  color: var(--secondary-color);
 }
 
 #mini-button:hover {
-  color: #E384FF;
+  color: var(--secondary-color);
   cursor: pointer;
 }
 
@@ -107,14 +105,13 @@ input {
     width: 20%;
     margin: 3% 0 0 42%;
     padding: 1.5% 1.5%;
-    font-size: 90%;
+    font-size: var(--btn-font-size);
   }
 
   .search-field {
-    margin: 0 auto;
+    margin: 75px auto 0;
     width: 90%;
     max-width: 485px;
-    margin-top: 75px;
   }
 
   .post {

@@ -7,25 +7,26 @@
   height: 60px;
   width: 100%;
   padding: 0.5rem 0rem;
-  background-color: #191825;
-  color: #865DFF;
+  background-color: var(--body-color);
+  color: var(--accent-color);
 }
 
 .logo {
   text-decoration: none;
-  font-size: 2rem;
+  font-size: var(--logo-font-size);
   margin-left: 1rem;
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: #865DFF;
+  font-family: var(--font-family-name-logo);
+  color: var(--accent-color);
   transition: 0.33s;
 }
 
 .logo:hover {
-  color: #FFA3FD;
+  color: var(--secondary-color);
 }
 
 .navigation-menu {
   margin-left: auto;
+  z-index: 10;
 }
 
 .navigation-menu ul {
@@ -42,17 +43,17 @@
   text-decoration: none;
   display: block;
   width: 100%;
-  font-size: 1.2rem;
+  font-size: var(--nav-size);
 }
 
 .navigation-menu li .link:link,
 .navigation-menu li .link:active,
 .navigation-menu li .link:visited {
-  color: #fff;
+  color: var(--font-color);
 }
 
 .current-page {
-  border-bottom: 2px solid #865DFF;
+  border-bottom: 2px solid var(--accent-color);
 }
 
 .hamburger {
@@ -61,7 +62,7 @@
   width: 40px;
   padding: 0.5rem;
   border-radius: 50%;
-  background-color: #865DFF;
+  background-color: var(--accent-color);
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
   position: absolute;
@@ -72,7 +73,7 @@
 }
 
 .hamburger:hover {
-  background-color: #7752FE;
+  background-color: var(--accent-light-color);
 }
 
 .hidden {
@@ -106,13 +107,8 @@
     padding: 1.5rem 0;
   }
 
-  .btn-off {
-    color: black;
-  }
-
   .navigation-menu li:hover {
-    background-color: #35335c;
-    color: black;
+    background-color: var(--bg-wrap-color);
   }
 
   .navigation-menu.expanded ul {

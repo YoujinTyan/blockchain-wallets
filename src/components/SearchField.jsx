@@ -40,13 +40,13 @@ function SearchField() {
         };
     } else {
       // Нажали на кнопку поиска и не ввели запрос
-      alert('Please, enter a searching phrase');
+      alert('Вы не ввели фразу/слово для поиска');
     }
   };
 
   function resetPosts() {
     fetchData(store).then(() => {
-      console.log('updated posts in store')
+      console.log('updated posts in store');
       dispatch(changeSearchingState({
         turnOn: false, foundData: false
       }));

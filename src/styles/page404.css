@@ -8,24 +8,17 @@
 .container{
   display: table-cell;
   vertical-align: middle;
-  color: #A6979C;
+  color: var(--disabled-color);
 }
 
 .container h1{
-  font-size: 50px;
+  font-size: var(--h1-size);
   display: inline-block;
-  padding-right: 12px;
-  animation: type .5s alternate infinite;
 }
 
 .back-link {
   text-decoration: none;
   animation: attention 1.5s infinite;
-}
-
-@keyframes type{
-  from{box-shadow: inset -3px 0px 0px #A6979C;}
-  to{box-shadow: inset -3px 0px 0px transparent;}
 }
 
 @keyframes attention{

@@ -4,7 +4,12 @@ import { createSlice } from "@reduxjs/toolkit";
 export const postReducer = createSlice({
     name: 'postList',
     initialState: {
-        posts: [],
+        posts: [{
+            body: "template body",
+            id: 2,
+            title: "template header",
+            userId: 1,
+        }],
         searching: { turnOn: false, notFound: false }, // turnOn - использовали ли поиск, foundData - нашли ли посты
     },
     reducers: {
