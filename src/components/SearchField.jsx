@@ -1,14 +1,11 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { fetchData } from "../services/api";
 import {changeSearchingState} from "../store/reducers/post_reducer";
-import { setPosts } from "../store/reducers/post_reducer";
-
-import { store } from "../store/store";
 
 
-function SearchField() {
+function SearchField(props) {
+  const { setPosts } = props;
   const [ inputValue, setInputValue ] = useState('');
   const dispatch = useDispatch();
   const posts = useSelector(state => state.postList.posts)
@@ -18,8 +15,9 @@ function SearchField() {
       try {
         // Фильтруем тольк те посты, которые совпадают с поисковым запросом
         const filteredPosts = posts.filter((post) => {
-            return post.title.toLowerCase().includes(inputValue.toLowerCase()) || post.body.toLowerCase().includes(inputValue);
+          return post.title.toLowerCase().includes(inputValue.toLowerCase()) || post.body.toLowerCase().includes(inputValue.toLowerCase());
         });
+        console.log(filteredPosts)
         if (filteredPosts.length === 0) {
           alert('Ничего не найдено')
           dispatch(changeSearchingState({
@@ -27,11 +25,13 @@ function SearchField() {
           }));
         } else {
           // Если посты отфильтровались, то меняем их в сторе
-          dispatch(setPosts(filteredPosts));
+          // dispatch(setPosts(filteredPosts));
           dispatch(changeSearchingState({
             turnOn: true, notFound: false
           }));
           console.log('posts found', filteredPosts.length);
+          // Записываем отфильтрованные посты в стейт
+          setPosts(filteredPosts);
         };
         // Сбрасываем запрос
         setInputValue('');
@@ -45,22 +45,24 @@ function SearchField() {
   };
 
   function resetPosts() {
-    fetchData(store).then(() => {
-      console.log('updated posts in store');
-      dispatch(changeSearchingState({
-        turnOn: false, foundData: false
-      }));
-    });
+    setPosts([]);
+    console.log('posts in state deleted');
+    dispatch(changeSearchingState({
+      turnOn: false, foundData: false
+    }));
   }
 
   function handleOnChange(event) {
     event.preventDefault();
-      setInputValue(event.target.value);
+    setInputValue(event.target.value);
+    if (inputValue.trim().length === 0) {
+      setPosts([])
     };
+  };
 
   return (
     <div className={posts.length > 0 ? 'search-field' : 'search-field disabled'}>
-      <h4>Поиск по постам <span id={"mini-button"} onClick={resetPosts}>Обновить</span></h4>
+      <h4>Поиск по постам<span id={"mini-button"} onClick={resetPosts}>Обновить</span></h4>
       <input
         onChange={handleOnChange}
         type='text'

@@ -20,12 +20,12 @@ import {setPosts} from "../store/reducers/post_reducer";
 
 
 function MainPage(props) {
-  const [ allPosts, setAllPosts ] = useState([])
+  const [ posts, setPosts ] = useState([])
 
-  const { store } = props;
+  // const { store } = props;
   // массив постов
   const dispatch = useDispatch();
-  const posts = useSelector(state => state.postList.posts)
+  const postsInStore = useSelector(state => state.postList.posts)
   // количество постов на странице
   const [ postCounterOnPage, setpostCounterOnPage ] = useState(10);
   // текущая страница (номер)
@@ -34,23 +34,17 @@ function MainPage(props) {
   const [ pageCount, setpageCount ] = useState(1);
 
   useEffect(() => {
-    fetchData(setAllPosts).then((d) => {
-      console.log('loaded');
-      setpageCount(posts.length / postCounterOnPage); // количество страниц
-
-      // if (data.nbPages < page) {
-      //   setPage(1);
-      //   props.history.replace("/");
-      // }
+    fetchData().then((d) => {
+      return
     });
-    // dispatch(setPosts(allPosts));
   });
 
   return (
     <div className="post-list">
       <h1>Небольшой блог</h1>
-      <SearchField />
+      <SearchField setPosts={setPosts} />
       <PostList
+        posts={posts.length > 0 ? posts : postsInStore}
         pageCount={pageCount}
         page={page}
         setPage={setPage}

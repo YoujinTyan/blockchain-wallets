@@ -6,9 +6,9 @@ export const fetchData = async () => {
 
   await fetch(data.urlPosts)
   .then((response) => response.json())
-  .then((data) => {
-    console.log('store updated:', data);
-    // store.dispatch(setPosts(data))
+  .then((posts) => {
+    // console.log('store updated:', data);
+    store.dispatch(setPosts(posts))
   })
   .catch((error) => console.log(error));
 };

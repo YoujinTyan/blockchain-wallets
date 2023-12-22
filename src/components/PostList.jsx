@@ -13,11 +13,9 @@ import {
 
 
 function PostList(props) {
-  const { postCounterOnPage, pageCount, page, setPage } = props;
+  const { posts, postCounterOnPage, pageCount, page, setPage } = props;
   const { postsPerPage, setPostsPerPage } = useState([]);
-  const posts = useSelector(state => state.postList.posts);
   const searching = useSelector(state => state.postList.searching);
-  console.log(searching)
 
   return(
     <div className='posts'>
@@ -40,17 +38,14 @@ function PostList(props) {
       {/*    )}*/}
       {/*  />*/}
 
-        { posts.length > 1 && !searching.notFound ?
+        { posts.length > 0 && posts[0].title !== 'template header' && !searching.notFound ?
             posts.map((post) => (
-              // <Link key={ post.id }>
-              //   <div>Hello</div>
               <Post
                 key={ post.id }
                 id={ post.id }
                 titlePost={ post.title }
                 bodyPost={ post.body }
               />
-              // </Link>
           )
             ) : searching.notFound ?
               <div className="post"><h1>Постов по данному запросу не найдено</h1></div>
