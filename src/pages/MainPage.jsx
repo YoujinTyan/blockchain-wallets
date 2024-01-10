@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 
 import { fetchData } from '../services/api';
-import SearchField from '../components/SearchField';
+// import SearchField from '../components/SearchField';
+import SearchField from '../components/SearchFieldComponent';
 
 import PostList from '../components/PostList';
 

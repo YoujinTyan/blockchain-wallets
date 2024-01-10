@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { setNotFound } from "../store/reducers/post_reducer";
+import { setNotFound } from "../../store/reducers/post_reducer";
+
+import './style.css';
 
 
 function SearchField(props) {

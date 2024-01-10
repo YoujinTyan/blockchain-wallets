@@ -1,0 +1,30 @@
+.search-field {
+    margin: 75px auto 0;
+    display: block;
+    text-align: left;
+    width: 100%;
+    max-width: 485px;
+}
+
+#mini-button {
+    font-size: var(--small-text-size);
+    margin-left: 185px;
+    color: var(--secondary-color);
+}
+  
+  #mini-button:hover {
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1279px) {
+    .search-field {
+      margin: 75px auto 0;
+      width: 90%;
+      max-width: 485px;
+    }
+
+    #mini-button {
+        margin-left: 280px;
+      }
+}
