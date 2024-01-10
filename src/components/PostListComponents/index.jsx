@@ -1,7 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
-import Post from '../components/Post';
+import Post from './components/Post';
 import {Link as NavLink} from "react-router-dom";
 import {useState} from "react";
+import './style.css';
 
 import {
   Pagination,
@@ -10,7 +11,7 @@ import {
   Stack,
   Link
 } from '@mui/material';
-import {changeSearchingState} from "../store/reducers/post_reducer";
+import {changeSearchingState} from "../../store/reducers/post_reducer";
 
 
 function PostList(props) {

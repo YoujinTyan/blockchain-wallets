@@ -5,7 +5,8 @@ import { fetchData } from '../services/api';
 // import SearchField from '../components/SearchField';
 import SearchField from '../components/SearchFieldComponent';
 
-import PostList from '../components/PostList';
+// import PostList from '../components/PostList';
+import PostList from '../components/PostListComponents';
 
 // import {
 //   Pagination,
@@ -15,8 +16,7 @@ import PostList from '../components/PostList';
 //   Link
 // } from '@mui/material';
 
-import '../styles/pageMain.css';
-import '../styles/loader.css';
+// import '../styles/loader.css';
 
 
 function MainPage() {
