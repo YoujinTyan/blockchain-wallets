@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function Gamburger(props) {
+function Hamburger(props) {
   const { isNavExpanded, setIsNavExpanded } = props;
 
   return (
@@ -26,4 +26,4 @@ function Gamburger(props) {
   );
 };
 
-export default Gamburger;
+export default Hamburger;

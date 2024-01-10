@@ -19,7 +19,7 @@ function PostList(props) {
   // const { postsPerPage, setPostsPerPage } = useState([]);
   const isNotFound = useSelector(state => state.postList.notFound);
   const dispatch = useDispatch();
-  console.log('POSTS:', posts);
+  // console.log('POSTS:', posts);
 
 
 

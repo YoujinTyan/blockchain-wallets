@@ -1,7 +1,7 @@
 import React from 'react';
 
 import NavLink from './NavLink';
-import Gamburger from './Gamburger';
+import Hamburger from './Hamburger';
 
 
 function NavBar(props) {
@@ -9,7 +9,7 @@ function NavBar(props) {
 
   return (
     <React.Fragment>
-      <Gamburger
+      <Hamburger
         isNavExpanded={isNavExpanded}
         setIsNavExpanded={setIsNavExpanded}
       />
