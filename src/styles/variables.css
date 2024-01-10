@@ -35,8 +35,13 @@
 
 
     /* шрифты */
-    --font-family-name: Roboto;
-    --font-family-name-logo: Impact;
+    --font-family-name-logo: Impact, Haettenschweiler, 'Arial Narrow Bold';
+
+    --font-family-name-franklin: 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+    --font-family-name-curier: 'Courier New', Courier, monospace;
+    --font-family-name-calibri: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+    --font-family-name-segoe: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-name-roboto: system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue';
     /*
         Tahoma,
         Calibri,
@@ -96,4 +101,24 @@
     --accent-light-color: var(--accent-light-color-dark);
     /* надписи страницы 404 */
     --disabled-color: var(--disabled-color-dark);
+}
+
+[data-font='franklin'] {
+    --font-family-name: var(--font-family-name-franklin);
+}
+
+[data-font='curier'] {
+    --font-family-name: var(--font-family-name-curier);
+}
+
+[data-font='calibri'] {
+    --font-family-name: var(--font-family-name-calibri);
+}
+
+[data-font='segoe ui'] {
+    --font-family-name: var(--font-family-name-segoe);
+}
+
+[data-font='roboto'] {
+    --font-family-name: var(--font-family-name-roboto);
 }

@@ -12,11 +12,11 @@ export const SETTINGS_STORE_CONSTANTS = {
     LIGHT: 'light',
     DARK: 'dark',
 
-    FONT_TAHOMA: 'Impact',
-    FONT_CALIBRI: 'Tahoma',
-    FONT_SEGOE: 'Calibri',
-    FONT_IMPACT: 'Segoe UI',
-    FONT_ROBOTO: 'Roboto',
+    FONT_CURIER: 'curier',
+    FONT_CALIBRI: 'calibri',
+    FONT_SEGOE: 'segoe ui',
+    FONT_FRANKLIN: 'franklin',
+    FONT_ROBOTO: 'roboto',
 
     FONT_SIZE_LARGE: 'large',
     FONT_SIZE_NORMAL: 'normal',
@@ -37,7 +37,7 @@ export const SETTINGSPAGE_CONSTANTS = {
                 component: 'Toggle',
                 childrenParams: {
                     onChange: {},
-                    defaultChecked: ''
+                    type: 'walletToggle'
                 },  
             }, 
         },
@@ -47,7 +47,7 @@ export const SETTINGSPAGE_CONSTANTS = {
                 component: 'Toggle',
                 childrenParams: {
                     onChange: {},
-                    defaultChecked: ''
+                    type: 'themeToggle'
                 },
             }, 
         },
@@ -59,11 +59,12 @@ export const SETTINGSPAGE_CONSTANTS = {
                     name: 'font-name-select',
                     options: [
                         { name: 'calibri',  option: SETTINGS_STORE_CONSTANTS.FONT_CALIBRI },
-                        { name: 'impact',   option: SETTINGS_STORE_CONSTANTS.FONT_IMPACT  },
-                        { name: 'tahoma',   option: SETTINGS_STORE_CONSTANTS.FONT_TAHOMA  },
+                        { name: 'franklin',   option: SETTINGS_STORE_CONSTANTS.FONT_FRANKLIN  },
+                        { name: 'curier',   option: SETTINGS_STORE_CONSTANTS.FONT_CURIER  },
                         { name: 'segoe ui', option: SETTINGS_STORE_CONSTANTS.FONT_SEGOE   },
                         { name: 'roboto',   option: SETTINGS_STORE_CONSTANTS.FONT_ROBOTO  },
-                    ]
+                    ],
+                    type: 'FontOption',
                 },
             }, 
         },
@@ -78,6 +79,7 @@ export const SETTINGSPAGE_CONSTANTS = {
                         { name: SETTINGS_STORE_CONSTANTS.FONT_SIZE_NORMAL, option: 'Нормальный' },
                         { name: SETTINGS_STORE_CONSTANTS.FONT_SIZE_SMALL,  option: 'Мелкий'     },
                     ],
+                    type: 'fontSizeOption',
                 },
             }, 
         },
@@ -92,6 +94,7 @@ export const SETTINGSPAGE_CONSTANTS = {
                         { name: SETTINGS_STORE_CONSTANTS.POSTS_COUNT_MEDIUM, option: 10 },
                         { name: SETTINGS_STORE_CONSTANTS.POSTS_COUNT_MUCH,   option: 15 },
                     ],
+                    type: 'pageCountOption',
                 },
             }, 
         },

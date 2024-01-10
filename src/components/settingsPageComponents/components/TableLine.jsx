@@ -5,7 +5,7 @@ import Options from './OptionsComponent';
 
 function TableLine( props ) {
 
-    const { children, title } = props;
+    const { children, title, action } = props;
     // console.log(children.childrenParams)
 
   return (
@@ -15,12 +15,14 @@ function TableLine( props ) {
         {/* {console.log('params:', children.childrenParams)} */}
         { children.component === 'Toggle' ?
           (<Toggle
-            onChangeAction={children.childrenParams.onChange.changeTheme}
+            params={children.childrenParams}
           />)
           :
           (<Options
             name={children.childrenParams.name}
             options={children.childrenParams.options}
+            type={children.childrenParams.type}
+            action={action}
           />)
         }
         </td>

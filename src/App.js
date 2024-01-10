@@ -14,11 +14,14 @@ import { useSelector } from 'react-redux';
 function App(props) {
     const { store } = props;
 
-    const theme = useSelector((state) => state.settings.theme)
+    const theme = useSelector((state) => state.settings.theme);
+    const fontFamily = useSelector((state) => state.settings.fontFamily);
     // TODO: add font, size etc
 
     useEffect(() => {
+        console.log('in app.jsx:', fontFamily)
         document.documentElement.setAttribute('data-theme', theme);
+        document.documentElement.setAttribute('data-font', fontFamily);
       })
 
     return (
