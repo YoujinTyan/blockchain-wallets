@@ -3,75 +3,12 @@ import { useState } from "react";
 import './style.css';
 import Button from './components/Button';
 import TableLine from './components/TableLine';
-
+import { SETTINGSPAGE_CONSTANTS } from "../../utils/constants";
 
 function Settings() {
 
-  const settingsTable = [
-    {
-      title: 'Вкл/Выкл Cardano',
-      children: {
-        component: 'Toggle',
-        childrenParams: {
-          onChange: {turnOffOnCardano},
-          defaultChecked: ''
-        },  
-      }, 
-    },
-    {
-      title: 'Тёмная тема', 
-      children: {
-        component: 'Toggle',
-        childrenParams: {
-          onChange: { changeTheme },
-          defaultChecked: ''
-        },
-      }, 
-    },
-    {
-      title: 'Шрифт', 
-      children: {
-        component: 'Options',
-        childrenParams: {
-          name: 'font-name-select',
-          options: [
-            { name: 'calibri',  option: 'Calibri'  },
-            { name: 'tahoma',   option: 'Tahoma'   },
-            { name: 'segoe ui', option: 'Segoe UI' },
-            { name: 'roboto',   option: 'Roboto'   },
-          ]
-        },
-      }, 
-    },
-    {
-      title: 'Размер шрифта', 
-      children: {
-        component: 'Options',
-        childrenParams: {
-          name: 'font-size-select',
-          options: [
-            { name: 'large',    option: 'Крупный'    },
-            { name: 'normal',   option: 'Нормальный' },
-            { name: 'small',    option: 'Мелкий'     },
-          ],
-        },
-      }, 
-    },
-    {
-      title: 'Кол-во постов на странице', 
-      children: {
-        component: 'Options',
-        childrenParams: {
-          name: 'count-posts-select',
-          options: [
-            { name: 'little', option: 5  },
-            { name: 'medium', option: 10 },
-            { name: 'much',   option: 15 },
-          ],
-        },
-      }, 
-    },
-  ];
+  const settingsTable = SETTINGSPAGE_CONSTANTS.settings_data;
+
   
   const [ themeState, setThemeState ] = useState('light');
 
@@ -87,6 +24,8 @@ function Settings() {
     console.log('turnOffOnCardano');
   };
 
+  settingsTable[0].children.childrenParams.onChange = {turnOffOnCardano};
+  settingsTable[1].children.childrenParams.onChange = {changeTheme};
 
   return (
     <table className="table">

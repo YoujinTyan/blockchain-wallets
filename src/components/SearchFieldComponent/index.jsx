@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { setNotFound } from "../../store/reducers/post_reducer";
-
+import { MAINPAGE_CONSTANTS } from "../../utils/constants";
 import './style.css';
 
 
@@ -39,7 +39,7 @@ function SearchField(props) {
 
   return (
     <div className={posts.length > 0 ? 'search-field' : 'search-field disabled'}>
-      <h4>Поиск по постам<span id={"mini-button"} onClick={resetPosts}>Обновить</span></h4>
+      <h4>{MAINPAGE_CONSTANTS.TITLE_H4}<span id={"mini-button"} onClick={resetPosts}>Обновить</span></h4>
       <input
         onChange={handleOnChange}
         type='text'
@@ -49,7 +49,7 @@ function SearchField(props) {
       <button
         className='search-btn'
         onClick={handleOnClick}
-      >Найти</button>
+      >{MAINPAGE_CONSTANTS.SEARCH_BTN_NAME}</button>
     </div>
   );
 };

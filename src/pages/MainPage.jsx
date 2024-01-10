@@ -7,6 +7,7 @@ import SearchField from '../components/SearchFieldComponent';
 
 // import PostList from '../components/PostList';
 import PostList from '../components/PostListComponents';
+import { MAINPAGE_CONSTANTS } from '../utils/constants';
 
 // import {
 //   Pagination,
@@ -43,7 +44,7 @@ function MainPage() {
 
   return (
     <div className="post-list">
-      <h1>Небольшой блог</h1>
+      <h1>{MAINPAGE_CONSTANTS.TITLE_H1}</h1>
       <SearchField setSearchingQuery={setSearchingQuery} />
       <PostList
         posts={postsInStore}

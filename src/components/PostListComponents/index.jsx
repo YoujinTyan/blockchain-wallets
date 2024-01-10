@@ -1,7 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import Post from './components/Post';
-import {Link as NavLink} from "react-router-dom";
-import {useState} from "react";
+import { Link as NavLink } from "react-router-dom";
+import { useState } from "react";
+import { MAINPAGE_CONSTANTS } from "../../utils/constants";
 import './style.css';
 
 import {
@@ -63,7 +64,7 @@ function PostList(props) {
                 </div>
           : (
               <div className="post">
-                <h1>Постов по данному запросу не найдено</h1>
+                <h1>{MAINPAGE_CONSTANTS.POSTS_NOT_FOUND}</h1>
               </div>
             )
         };

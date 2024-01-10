@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { PAGE404_CONSTANTS } from '../utils/constants';
 import "../styles/page404.css";
 
 
@@ -8,11 +8,13 @@ function Page404() {
   return (
     <div className="main-container">
       <div className="container">
-            <h1>Ошибка 404</h1>
-            <h3>Страница не найдена</h3>
+            <h1>{PAGE404_CONSTANTS.TITLE}</h1>
+            <h3>{PAGE404_CONSTANTS.SUBTITLE}</h3>
             <p>
-              Вернитесь на одну из страниц сайта 
-              или перейдите на <Link className='back-link' to={"/"}><strong>главную</strong></Link>
+              {PAGE404_CONSTANTS.TEXT} 
+              <Link className='back-link' to={"/"}>
+                <strong>{PAGE404_CONSTANTS.LABEL}</strong>
+              </Link>
             </p>
       </div>
     </div>

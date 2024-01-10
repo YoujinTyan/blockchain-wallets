@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar';
+import { HEADER_CONSTANTS } from '../utils/constants';
 import '../styles/head.css';
 
 
@@ -11,7 +12,7 @@ function Head() {
   return (
     <nav className='navigation'>
       <Link to="/" className="logo">
-        MBWallets
+        {HEADER_CONSTANTS.LOGO}
       </Link>
       <NavBar 
         isNavExpanded={isNavExpanded}

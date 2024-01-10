@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import '../styles/pageSettings.css'
 import { useSelector } from "react-redux";
 import Settings from '../components/settingsPageComponents';
-
+import { SETTINGSPAGE_CONSTANTS } from '../utils/constants';
 
 function SettingsPage() {
   const [ themeState, setThemeState ] = useState('light')
@@ -23,7 +23,7 @@ function SettingsPage() {
   return (
     <div className={'container'}>
 
-      <h2>Настройки</h2>
+      <h2>{SETTINGSPAGE_CONSTANTS.PAGE_TITLE}</h2>
       <Settings />
       
     </div>
