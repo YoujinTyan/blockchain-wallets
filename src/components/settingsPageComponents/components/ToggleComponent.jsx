@@ -2,7 +2,8 @@ import React from 'react';
 
 
 function Toggle(props) {
-  const { onChangeAction, defaultCheckedValue } = props;
+  const { onChangeAction } = props;
+  // console.log('----------', onChangeAction)
 
   return (
     <label className="switch">
@@ -10,7 +11,6 @@ function Toggle(props) {
         id="slider"
         type="checkbox"
         onChange={onChangeAction}
-        defaultChecked={defaultCheckedValue}
         />
         <span className="slider round"></span>
     </label>

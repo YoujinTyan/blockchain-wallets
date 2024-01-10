@@ -1,31 +1,31 @@
 import { useSelector } from "react-redux";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import './style.css';
+import { useDispatch } from "react-redux";
 import Button from './components/Button';
 import TableLine from './components/TableLine';
-import { SETTINGSPAGE_CONSTANTS } from "../../utils/constants";
+import { SETTINGSPAGE_CONSTANTS,  SETTINGS_STORE_CONSTANTS as VARS} from "../../utils/constants";
+import { setTheme } from "../../store/reducers/settings_reducer";
 
 function Settings() {
 
   const settingsTable = SETTINGSPAGE_CONSTANTS.settings_data;
-
   
-  const [ themeState, setThemeState ] = useState('light');
+  settingsTable[0].children.childrenParams.onChange = {turnOffOnCardano};
+  settingsTable[1].children.childrenParams.onChange = {changeTheme};
 
-  const currentTheme = useSelector(state => state.settings.theme);
+  const dispatch = useDispatch();
+  const themeState = useSelector((state) => state.settings.theme)
+
 
   function changeTheme() {
-    themeState === 'dark' ? setThemeState('light') : setThemeState('dark');
-    // ставим currentTheme --> dark | light
-    console.log('theme changed');
+    dispatch(setTheme(themeState === VARS.LIGHT ? VARS.DARK : VARS.LIGHT))
   };
 
   function turnOffOnCardano() {
     console.log('turnOffOnCardano');
   };
 
-  settingsTable[0].children.childrenParams.onChange = {turnOffOnCardano};
-  settingsTable[1].children.childrenParams.onChange = {changeTheme};
 
   return (
     <table className="table">

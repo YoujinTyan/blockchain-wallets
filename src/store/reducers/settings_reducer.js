@@ -1,14 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { SETTINGS_STORE_CONSTANTS as VARS } from "../../utils/constants";
 
 
 export const settingsReducer = createSlice({
   name: 'settings',
   initialState: {
-    cardanoMode: false,
-    theme: 'light',
-    fontFamily: 'Roboto',
-    fontSize: 'normal',
-    countPostsPerPage: 5,
+    cardanoMode: VARS.CARDANO_OFF,
+    theme: VARS.LIGHT,
+    fontFamily: VARS.FONT_ROBOTO,
+    fontSize: VARS.FONT_SIZE_NORMAL,
+    countPostsPerPage: VARS.POSTS_COUNT_MEDIUM,
   },
 
   reducers: {
@@ -22,13 +23,7 @@ export const settingsReducer = createSlice({
       state.fontFamily = action.payload;
     },
     setFontSize: (state, action) => {
-      if (action.payload === 'крупный') {
-        state.fontSize = 'big';
-      } else if (action.payload === 'нормальный') {
-        state.fontSize = 'normal';
-      } else if (action.payload === 'мелкий') {
-        state.fontSize = 'small';
-      }
+      state.fontSize = action.payload;
 
     },
     setCountPostsPerPage: (state, action) => {

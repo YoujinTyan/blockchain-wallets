@@ -23,8 +23,8 @@ import { MAINPAGE_CONSTANTS } from '../utils/constants';
 function MainPage() {
   const [ searchingQuery, setSearchingQuery ] = useState('');
   const postsInStore = useSelector(state => state.postList.posts);
-
   const currentTheme = useSelector(state => state.settings.theme);
+  
 
   // const { store } = props;
 
@@ -36,11 +36,11 @@ function MainPage() {
   // количество страниц
   // const [ pageCount, setpageCount ] = useState(1);
 
-  useEffect(() => {
-    fetchData(1, 5, searchingQuery)
-      .then(() => 0);
-    document.documentElement.setAttribute('data-theme', currentTheme);
-  });
+  // useEffect(() => {
+  //   fetchData(1, 5, searchingQuery)
+  //     .then(() => 0);
+  //   document.documentElement.setAttribute('data-theme', currentTheme);
+  // });
 
   return (
     <div className="post-list">

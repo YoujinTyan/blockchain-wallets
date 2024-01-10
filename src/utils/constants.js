@@ -5,6 +5,29 @@ export const MAINPAGE_CONSTANTS = {
     POSTS_NOT_FOUND: 'Постов по данному запросу не найдено',
 };
 
+export const SETTINGS_STORE_CONSTANTS = {
+    CARDANO_ON: true,
+    CARDANO_OFF: false,
+
+    LIGHT: 'light',
+    DARK: 'dark',
+
+    FONT_TAHOMA: 'Impact',
+    FONT_CALIBRI: 'Tahoma',
+    FONT_SEGOE: 'Calibri',
+    FONT_IMPACT: 'Segoe UI',
+    FONT_ROBOTO: 'Roboto',
+
+    FONT_SIZE_LARGE: 'large',
+    FONT_SIZE_NORMAL: 'normal',
+    FONT_SIZE_SMALL: 'small',
+
+    POSTS_COUNT_LITTLE: 'little',
+    POSTS_COUNT_MEDIUM: 'medium',
+    POSTS_COUNT_MUCH: 'much',
+};
+
+
 export const SETTINGSPAGE_CONSTANTS = {
     PAGE_TITLE: 'Настройки',
     settings_data: [
@@ -35,10 +58,11 @@ export const SETTINGSPAGE_CONSTANTS = {
                 childrenParams: {
                     name: 'font-name-select',
                     options: [
-                        { name: 'calibri',  option: 'Calibri'  },
-                        { name: 'tahoma',   option: 'Tahoma'   },
-                        { name: 'segoe ui', option: 'Segoe UI' },
-                        { name: 'roboto',   option: 'Roboto'   },
+                        { name: 'calibri',  option: SETTINGS_STORE_CONSTANTS.FONT_CALIBRI },
+                        { name: 'impact',   option: SETTINGS_STORE_CONSTANTS.FONT_IMPACT  },
+                        { name: 'tahoma',   option: SETTINGS_STORE_CONSTANTS.FONT_TAHOMA  },
+                        { name: 'segoe ui', option: SETTINGS_STORE_CONSTANTS.FONT_SEGOE   },
+                        { name: 'roboto',   option: SETTINGS_STORE_CONSTANTS.FONT_ROBOTO  },
                     ]
                 },
             }, 
@@ -50,9 +74,9 @@ export const SETTINGSPAGE_CONSTANTS = {
                 childrenParams: {
                     name: 'font-size-select',
                     options: [
-                        { name: 'large',    option: 'Крупный'    },
-                        { name: 'normal',   option: 'Нормальный' },
-                        { name: 'small',    option: 'Мелкий'     },
+                        { name: SETTINGS_STORE_CONSTANTS.FONT_SIZE_LARGE,  option: 'Крупный'    },
+                        { name: SETTINGS_STORE_CONSTANTS.FONT_SIZE_NORMAL, option: 'Нормальный' },
+                        { name: SETTINGS_STORE_CONSTANTS.FONT_SIZE_SMALL,  option: 'Мелкий'     },
                     ],
                 },
             }, 
@@ -64,9 +88,9 @@ export const SETTINGSPAGE_CONSTANTS = {
                 childrenParams: {
                     name: 'count-posts-select',
                     options: [
-                        { name: 'little', option: 5  },
-                        { name: 'medium', option: 10 },
-                        { name: 'much',   option: 15 },
+                        { name: SETTINGS_STORE_CONSTANTS.POSTS_COUNT_LITTLE, option: 5  },
+                        { name: SETTINGS_STORE_CONSTANTS.POSTS_COUNT_MEDIUM, option: 10 },
+                        { name: SETTINGS_STORE_CONSTANTS.POSTS_COUNT_MUCH,   option: 15 },
                     ],
                 },
             }, 

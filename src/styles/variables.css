@@ -1,19 +1,37 @@
 :root {
     /* шрифты и фоны */
-    --body-color: #191825;
-    --bg-wrap-color: #35335c;
-    --font-color: #fff;
-    --dark-color: #2B2A4C;
+    --body-color-dark: #191825;
+    --bg-wrap-color-dark: #35335c;
+    --font-color-dark: #fff;
+    --dark-color-dark: #2B2A4C;
 
     /* в основном цвет кнопок */
-    --secondary-color: #FFA3FD;
+    --secondary-color-dark: #FFA3FD;
     /* одна полоса of loader и тумблеры*/
-    --third-color: #03c457;
+    --third-color-dark: #03c457;
     /* лого, гамбургер, акценты */
-    --accent-color: #865DFF;
-    --accent-light-color: #7752FE;
+    --accent-color-dark: #865DFF;
+    --accent-light-color-dark: #7752FE;
     /* надписи страницы 404 */
-    --disabled-color: #A6979C;
+    --disabled-color-dark: #A6979C;
+
+
+    /* шрифты и фоны */
+    --body-color-light: #FFD1E3;
+    --bg-wrap-color-light: #FFD1E3;
+    --font-color-light: #392467;
+    --dark-color-light: #f79fc1;
+
+    /* в основном цвет кнопок */
+    --secondary-color-light: #A367B1;
+    /* одна полоса of loader и тумблеры*/
+    --third-color-light: #5D3587;
+    /* лого, гамбургер, акценты */
+    --accent-color-light: #A367B1;
+    --accent-light-color-light: #A367B1;
+    /* надписи страницы 404 */
+    --disabled-color-light: #cac0c3;
+
 
 
     /* шрифты */
@@ -42,4 +60,40 @@
     --select-font-size-mobile: 0.6em;
     --h1-size-mobile: 30px;
     --h2-size-mobile: 1.8em;
+}
+
+[data-theme='light'] {
+    /* шрифты и фоны */
+    --body-color: var(--body-color-light);
+    --bg-wrap-color: var(--bg-wrap-color-light);
+    --font-color: var(--font-color-light);
+    --dark-color: var(--dark-color-light);
+
+    /* в основном цвет кнопок */
+    --secondary-color: var(--secondary-color-light);
+    /* одна полоса of loader и тумблеры*/
+    --third-color: var(--third-color-light);
+    /* лого, гамбургер, акценты */
+    --accent-color: var(--accent-color-light);
+    --accent-light-color: var(--accent-light-color-light);
+    /* надписи страницы 404 */
+    --disabled-color: var(--disabled-color-light);
+}
+
+[data-theme='dark'] {
+    /* шрифты и фоны */
+    --body-color: var(--body-color-dark);
+    --bg-wrap-color: var(--bg-wrap-color-dark);
+    --font-color: var(--font-color-dark);
+    --dark-color: var(--dark-color-dark);
+
+    /* в основном цвет кнопок */
+    --secondary-color: var(--secondary-color-dark);
+    /* одна полоса of loader и тумблеры*/
+    --third-color: var(--third-color-dark);
+    /* лого, гамбургер, акценты */
+    --accent-color: var(--accent-color-dark);
+    --accent-light-color: var(--accent-light-color-dark);
+    /* надписи страницы 404 */
+    --disabled-color: var(--disabled-color-dark);
 }
