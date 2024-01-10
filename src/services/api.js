@@ -1,4 +1,3 @@
-import { postsURL, postsURLByTitle } from "./config";
 import { setNotFound, setPosts } from "../store/reducers/post_reducer";
 import { store } from "../store/store";
 
