@@ -8,7 +8,8 @@ export const fetchData = async (page, limit, searchQuery) => {
   const paramTitles = process.env.REACT_APP_TITLES;
   const postsURL = `${baseURL}posts?${paramPages}${page}${paramLimit}${limit}`;
   const searchQueryURL = `${baseURL}posts?${paramPages}${page}${paramLimit}${limit}${paramTitles}${searchQuery}`;
-
+  console.log(postsURL)
+  console.log(searchQueryURL)
   if (searchQuery.length > 0) {  // если есть запрос, то ищем
     await fetch(searchQueryURL)
       .then((response) => response.json())

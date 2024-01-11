@@ -16,12 +16,14 @@ function App(props) {
 
     const theme = useSelector((state) => state.settings.theme);
     const fontFamily = useSelector((state) => state.settings.fontFamily);
+    const fontSize = useSelector((state) => state.settings.fontSize);
     // TODO: add font, size etc
 
     useEffect(() => {
         console.log('in app.jsx:', fontFamily)
         document.documentElement.setAttribute('data-theme', theme);
         document.documentElement.setAttribute('data-font', fontFamily);
+        document.documentElement.setAttribute('data-font-size', fontSize);
       })
 
     return (

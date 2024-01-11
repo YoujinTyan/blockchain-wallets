@@ -1,5 +1,4 @@
 import { useSelector } from "react-redux";
-import { useEffect, useState } from "react";
 import './style.css';
 import { useDispatch } from "react-redux";
 import Button from './components/Button';
@@ -24,19 +23,23 @@ function Settings() {
   };
 
   function turnOffOnCardano() {
-    console.log('turnOffOnCardano');
     dispatch(setCardanoMode(!cardanoMode));
   };
 
   function handleSelect(event, type) {
-    // console.log(type)
-    console.log('in handleSelect:', event.target.value)
-    // console.log(0)
     type === 'FontOption' ?
       dispatch(setFontFamily(event.target.value)) :
     type === 'fontSizeOption' ?
       dispatch(setFontSize(event.target.value)) :
-    dispatch(setCountPostsPerPage(event.target.value))
+    dispatch(setCountPostsPerPage(event.target.value));
+  };
+
+  function handleReset() {
+    dispatch(setCardanoMode(VARS.CARDANO_OFF));
+    dispatch(setTheme(VARS.LIGHT));
+    dispatch(setFontFamily(VARS.FONT_ROBOTO));
+    dispatch(setFontSize(VARS.FONT_SIZE_NORMAL));
+    dispatch(setCountPostsPerPage(VARS.POSTS_COUNT_MEDIUM));
   };
 
 
@@ -55,7 +58,7 @@ function Settings() {
         <tr className="thead">
           <td className="title-td">
             {/*TODO: стилизовать кнопку и добавить обработку reset*/}
-            <Button btnName={'Сбросить настройки'} />
+            <Button btnName={'Сбросить настройки'} action={handleReset}/>
           </td>
         </tr>
       </tbody>

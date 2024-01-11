@@ -2,10 +2,10 @@ import React from 'react';
 
 
 function Button(props) {
-  const { btnName } = props;
+  const { btnName, action } = props;
 
   return (
-    <button>{btnName}</button>
+    <button className='reset-button' onClick={action}>{btnName}</button>
   );
 };
 

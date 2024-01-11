@@ -36,11 +36,10 @@ function MainPage() {
   // количество страниц
   // const [ pageCount, setpageCount ] = useState(1);
 
-  // useEffect(() => {
-  //   fetchData(1, 5, searchingQuery)
-  //     .then(() => 0);
-  //   document.documentElement.setAttribute('data-theme', currentTheme);
-  // });
+  useEffect(() => {
+    fetchData(1, 5, searchingQuery)
+      .then(() => 0);
+  });
 
   return (
     <div className="post-list">

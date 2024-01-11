@@ -6,12 +6,19 @@ function Options( props ) {
 
     const { name, options, type, action } = props;
     const currentFont = useSelector((state) => state.settings.fontFamily)
+    const currentFontSize = useSelector((state) => state.settings.fontSize)
+    const currentPageCount = useSelector((state) => state.settings.countPostsPerPage)
 
   return (
     <label>
         <select 
+        
             name={name} 
-            value={currentFont} 
+            value={
+                type === 'FontOption' ? currentFont
+                : type === 'fontSizeOption' ? currentFontSize
+                : currentPageCount
+            } 
             className={
                 name === 'count-posts-select' ? "select small-select" : "select"
             }

@@ -120,6 +120,32 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
+.reset-button {
+    background: #e62143;
+    color: #fff;
+    cursor: pointer;
+    width: 70%;
+    display: flex;
+    /* box-sizing: border-box; */
+    border: 0;
+    border-radius: 11px;
+    justify-content: center;
+    /* text-align: center; */
+    font-weight: 700;
+    font-size: var(--btn-font-size);
+    font-family: var(--font-family-name-logo);
+    line-height: 30px;
+    padding: .8em 1em;
+    text-decoration: none;
+    /* text-decoration-skip-ink: auto; */
+    text-shadow: rgba(0, 0, 0, .3) 1px 1px 1px;
+    /* text-underline-offset: 1px; */
+}
+
+.reset-button:hover {
+    background: #831124;
+}
+
 @media screen and (max-width: 1279px) {
     h2 {
         font-size: var(--h2-size-mobile);
