@@ -58,7 +58,7 @@ function Settings() {
         <tr className="thead">
           <td className="title-td">
             {/*TODO: стилизовать кнопку и добавить обработку reset*/}
-            <Button btnName={'Сбросить настройки'} action={handleReset}/>
+            <Button btnName={'Сбросить'} action={handleReset}/>
           </td>
         </tr>
       </tbody>
