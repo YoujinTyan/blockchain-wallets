@@ -1,0 +1,49 @@
+создать новую ветку remake
+    .idea -> gitignore
+    yarnlock delete from repo and add to gitignor
+что такое метаданные
+api.js -> utils
+без стора
+
+в App.js только роутер
+в index -> стрикт мод и апп
+    index.js
+
+из окружения убрать инфу которуюб не надо скрывать, типа параметров в конфиг констант-файл
+-----------------------------
+НОВЫЙ ПРОЕКТ В main
+-----------------------------
+public
+    |icon
+    |index.html
+.gitignore
+    >.env
+    >notes
+    >LOCK files
+    >.dev
+package.json
+src
+    |assets
+        ||images
+        ||icons
+        ||*
+    |components
+        ||App
+            |||index.js\jsx\ts\tsx
+            |||style.css
+            |||meta.js\ts*
+        ||PostList
+        ||Post
+        ||StyledButton
+        |pages
+        ||SomePage
+            |||index.js\ts\jsx\tsx
+        |layouts
+        ||SomeLayout
+            |||index.js\ts\jsx\tsx
+    |hooks
+    |utils
+        ||api
+        ||constants
+    |router
+    |store
