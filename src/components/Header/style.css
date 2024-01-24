@@ -1,0 +1,58 @@
+.navigation {
+  visibility: visible;
+  position: sticky;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  padding: 0.5rem 0rem;
+  background-color: var(--body-color);
+  color: var(--accent-color);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.logo {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--accent-color);
+  text-decoration: none;
+  margin-left: 1rem;
+  transition: 0.33s;
+}
+
+.logo:hover {
+  color: var(--secondary-color);
+}
+
+.navigation-menu {
+  margin-left: auto;
+  z-index: 1;
+}
+
+.navigation-menu ul {
+  display: flex;
+  padding: 0;
+}
+
+.navigation-menu li {
+  list-style-type: none;
+  margin: 0 1rem;
+}
+
+.navigation-menu li .link {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+}
+
+.navigation-menu li .link:link,
+.navigation-menu li .link:active,
+.navigation-menu li .link:visited {
+  color: var(--font-color);
+}
+
+.current-page {
+  border-bottom: 2px solid var(--accent-color);
+}

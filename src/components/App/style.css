@@ -1,0 +1,54 @@
+:root {
+  /*темная тема */
+  --body-color-dark: #191825;
+  --bg-wrap-color-dark: #35335c;
+  --font-color-dark: #fff;
+  --dark-color-dark: #2B2A4C;
+
+  --secondary-color-dark: #FFA3FD; /* в основном цвет кнопок */
+  --third-color-dark: #03c457; /* одна полоса of loader и тумблеры*/
+  --accent-color-dark: #865DFF; /* лого, гамбургер, акценты */
+  --accent-light-color-dark: #7752FE;
+  --disabled-color-dark: #A6979C; /* надписи страницы 404 */
+
+  /*светлая тема*/
+  --body-color-light: #FFD1E3;
+  --bg-wrap-color-light: #FFD1E3;
+  --font-color-light: #392467;
+  --dark-color-light: #f79fc1;
+  
+  --secondary-color-light: #5D3587; /* в основном цвет кнопок */
+  --third-color-light: #5D3587; /* одна полоса of loader и тумблеры*/
+  --accent-color-light: #A367B1; /* лого, гамбургер, акценты */
+  --accent-light-color-light: #A367B1;
+  --disabled-color-light: #cac0c3;/* надписи страницы 404 */
+}
+
+
+/* THEMES */
+
+[data-theme='light'] {
+  --body-color: var(--body-color-light);
+  --bg-wrap-color: var(--bg-wrap-color-light);
+  --font-color: var(--font-color-light);
+  --dark-color: var(--dark-color-light);
+
+  --secondary-color: var(--secondary-color-light);
+  --third-color: var(--third-color-light);
+  --accent-color: var(--accent-color-light);
+  --accent-light-color: var(--accent-light-color-light);
+  --disabled-color: var(--disabled-color-light);
+}
+
+[data-theme='dark'] {
+  --body-color: var(--body-color-dark);
+  --bg-wrap-color: var(--bg-wrap-color-dark);
+  --font-color: var(--font-color-dark);
+  --dark-color: var(--dark-color-dark);
+
+  --secondary-color: var(--secondary-color-dark);
+  --third-color: var(--third-color-dark);
+  --accent-color: var(--accent-color-dark);
+  --accent-light-color: var(--accent-light-color-dark);
+  --disabled-color: var(--disabled-color-dark);
+}
