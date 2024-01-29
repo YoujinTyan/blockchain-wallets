@@ -5,7 +5,9 @@ export default function GeneralLayout({ children }) {
     return (
         <div className='general-layout'>
             <Header />
-            {children}
+            <div className='page-container'>
+                {children}
+            </div>
         </div>
     );
 };

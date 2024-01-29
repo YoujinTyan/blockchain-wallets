@@ -4,9 +4,7 @@ export default function Wallets() {
 
   return (
     <GeneralLayout>
-      <div id="container">
-        <h1>Wallets page</h1>
-      </div>
+      <h1>Wallets page</h1>
     </GeneralLayout>
   );
 }

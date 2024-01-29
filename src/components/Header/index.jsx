@@ -1,26 +1,17 @@
 import { Link } from "react-router-dom";
-import META from './meta';
+import NavMenu from "../NavMenu";
+import navContent from './meta';
 import './style.css';
 
 export default function Header() {
     return (
         <nav className='navigation'>
-
             <Link to={'/'} className="logo">
-                {META.LOGO}
+                {navContent.LOGO}
             </Link>
-
-            <div className="navigation-menu">
-                <ul>{META.NAVBUTTONS.map((button) => {
-                    return (
-                        <li key={button.id}>
-                            <Link className="link" to={button.route}>
-                                {button.name}
-                            </Link>
-                        </li>
-                    );
-                })}</ul>
-            </div>
+            <NavMenu 
+                navLinks={navContent.NAVLINKS}
+            />
             
         </nav>
     );

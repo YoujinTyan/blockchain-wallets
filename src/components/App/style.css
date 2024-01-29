@@ -22,6 +22,8 @@
   --accent-color-light: #A367B1; /* лого, гамбургер, акценты */
   --accent-light-color-light: #A367B1;
   --disabled-color-light: #cac0c3;/* надписи страницы 404 */
+
+  --font-family-impact: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 
