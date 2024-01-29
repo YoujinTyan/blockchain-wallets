@@ -1,10 +1,11 @@
 import GeneralLayout from "../../layouts/GeneralLayout";
 
-export default function Settings() {
+export default function Children3() {
 
   return (
     <GeneralLayout>
-      <h1>Settings page</h1>
+      <p>children</p>
     </GeneralLayout>
   );
 }
+  

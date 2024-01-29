@@ -1,24 +1,24 @@
-import Blog from '../../pages/Blog';
-import Error404 from '../../pages/Error404';
-import Wallets from '../../pages/Wallets';
-import Settings from '../../pages/Settings';
+import ErrorPage from '../../pages/ErrorPage';
+import Children from '../../pages/NamePage';
+import Children2 from '../../pages/NamePage2';
+import Children3 from '../../pages/NamePage3';
 
 const pagesMeta = [
   {
       name: 'Блог',
       path: '/',
-      element: <Blog />,
-      errorElement: <Error404 />
+      element: <Children />,
+      errorElement: <ErrorPage />
   },
   {
       name: 'Кошельки',
       path: '/wallets',
-      element: <Wallets />
+      element: <Children2 />
   },
   {
       name: 'Настройки',
       path: '/settings',
-      element: <Settings />
+      element: <Children3 />
   },
 ]
 

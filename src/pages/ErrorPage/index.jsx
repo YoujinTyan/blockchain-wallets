@@ -1,12 +1,12 @@
 import { useRouteError } from "react-router-dom";
 import GeneralLayout from "../../layouts/GeneralLayout";
 
-export default function Error404() {
+export default function ErrorPage() {
   const error = useRouteError();
 
   return (
     <GeneralLayout>
-      <h1>Ой! Упс!</h1>
+      <h1>Ошибка!</h1>
       <p>Такой страницы не существует.</p>
       <p>
         <p>Код ошибки:</p>

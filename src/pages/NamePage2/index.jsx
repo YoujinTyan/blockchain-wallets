@@ -1,11 +1,10 @@
 import GeneralLayout from "../../layouts/GeneralLayout";
 
-export default function Wallets() {
+export default function Children2() {
 
   return (
     <GeneralLayout>
-      <h1>Wallets page</h1>
+      <p>children</p>
     </GeneralLayout>
   );
 }
-  
