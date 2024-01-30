@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import NavMenu from "../NavMenu";
-import navContent from './meta';
+import { navContent } from './meta';
 import './style.css';
 
 export default function Header() {

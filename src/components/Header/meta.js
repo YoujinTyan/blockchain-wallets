@@ -1,4 +1,4 @@
-const navContent = {
+export const navContent = {
     LOGO: 'BLOCKCHAIN WALLETS',
     NAVLINKS: [
         {id: 0, name: 'Блог', route: '/'},
@@ -6,5 +6,3 @@ const navContent = {
         {id: 2, name: 'Настройки', route: '/settings'},
     ]
 };
-
-export default navContent;
