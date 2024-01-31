@@ -1,0 +1,31 @@
+.navigation-menu {
+  margin-left: auto;
+  z-index: 1;
+}
+
+.navigation-menu ul {
+  display: flex;
+  padding: 0;
+}
+
+.navigation-menu li {
+  list-style-type: none;
+  margin: 0 1rem;
+}
+
+.navigation-menu li .link {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+}
+
+.navigation-menu li .link:link,
+.navigation-menu li .link:active,
+.navigation-menu li .link:visited {
+  color: var(--font-color);
+}
+
+.selected-link {
+  border-bottom: 2px solid var(--accent-color);
+}
